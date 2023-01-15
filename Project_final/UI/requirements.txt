@@ -1,6 +1,5 @@
 gradio==3.16.1
 Pillow==9.2.0
-scikit-learn-intelex==2021.20221004.171935
 streamlit==1.17.0
 streamlit_lottie==0.18.0
 numpy==1.21.5

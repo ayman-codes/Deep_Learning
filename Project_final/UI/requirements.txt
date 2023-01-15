@@ -1,0 +1,12 @@
+gradio==3.16.1
+Pillow==9.2.0
+scikit-learn-intelex==2021.20221004.171935
+streamlit==1.17.0
+streamlit-lottie==0.0.3
+numpy==1.21.5
+pandas==1.4.4 
+seaborn==0.11.2
+sklearn==1.0.2
+matplotlib==3.5.2
+re==2.2.1
+scipy==1.9.1

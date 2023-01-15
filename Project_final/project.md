@@ -8,44 +8,15 @@
 
 <h2><center>Text Summarization</center></h2>
 <blockquote>
-<p>fdg</p>
-<blockquote>
-<p>dsfsdf</p>
-<blockquote>
-<p>sdfsdfsdf</p>
-</blockquote>
-</blockquote>
+<p>Summarize news Articles</p>
 </blockquote>
 
 <h2><center>Fake news Detection</center></h2>
 <blockquote>
-<p></p>
-<blockquote>
-<p></p>
-<blockquote>
-<p></p>
-</blockquote>
-</blockquote>
+<p>Grading trustworthiness of news articles</p>
 </blockquote>
 
-<h2><center>Translate language</center></h2>
+<h2><center>GUI</center></h2>
 <blockquote>
-<p></p>
-<blockquote>
-<p></p>
-<blockquote>
-<p></p>
-</blockquote>
-</blockquote>
-</blockquote>
-
-<h2><center>Gradio</center></h2>
-<blockquote>
-<p></p>
-<blockquote>
-<p></p>
-<blockquote>
-<p></p>
-</blockquote>
-</blockquote>
+<p>Using Gradio to create a simple GUI and host it, and streamlit to create a website for the Machine learning </p>
 </blockquote>

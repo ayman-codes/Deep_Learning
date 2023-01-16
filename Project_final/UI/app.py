@@ -14,7 +14,7 @@ def lottie_url(url):
 
 
 #Assets
-img = Image.open("images/icon.png")
+img = Image.open("icon.png")
 AntiRumour = Image.open('images/machine-learning.jpg')
 lottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')
 lottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')

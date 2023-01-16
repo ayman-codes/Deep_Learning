@@ -3,6 +3,7 @@ import streamlit as st
 from PIL import Image
 import requests
 from streamlit_lottie import st_lottie
+from io import BytesIO
 
 
 #JSON method for animation
@@ -14,14 +15,20 @@ def lottie_url(url):
 
 
 #Assets
-#img = Image.open("icon.png")
-AntiRumour = Image.open('images/machine-learning.jpg')
+url_icon = "https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/icon.png"
+response = requests.get(url_icon)
+img = Image.open(BytesIO(response.content))
+
+url_AntiRumour = "https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/machine-learning.jpg"
+response = requests.get(url_AntiRumour)
+AntiRumour = Image.open(BytesIO(response.content))
+
 lottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')
 lottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')
 lottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')
 
 #Config
-st.set_page_config(page_title = 'AntiRumour')
+st.set_page_config(page_title = 'AntiRumour', page_icon=img)
 
 #Header
 st.subheader('AntiRumour')

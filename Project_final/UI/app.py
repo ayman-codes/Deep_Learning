@@ -79,7 +79,7 @@ with st.container():
         st.write('''
                  Machine Learning To grade Trustworthiness of news articles\n
                  [Github Repository :computer:>] (https://github.com/ayman-codes/Deep_Learning)\n
-                 [Try it out yourself! :fire:>] (https://820aef56-fe45-4df7.gradio.live)   
+                 [Try it out yourself! :fire:>] (https://a738e78b-48bb-4230.gradio.live)   
                  ''')
         
 with st.container():
@@ -92,5 +92,5 @@ with st.container():
         st.write('''
                  Check the positivity of the news article\n
                  [Github Repository :computer:>] (https://github.com/ayman-codes/Deep_Learning)\n
-                 [Try it out yourself! :fire:>] (https://820aef56-fe45-4df7.gradio.live)   
+                 [Try it out yourself! :fire:>] (https://a738e78b-48bb-4230.gradio.live)   
                  ''')

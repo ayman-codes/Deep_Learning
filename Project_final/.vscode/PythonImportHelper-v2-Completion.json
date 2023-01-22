@@ -1,0 +1,152 @@
+[
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "st_lottie",
+        "importPath": "streamlit_lottie",
+        "description": "streamlit_lottie",
+        "isExtraImport": true,
+        "detail": "streamlit_lottie",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "lottie_url",
+        "kind": 2,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "def lottie_url(url):\n    r = requests.get(url)\n    if r.status_code != 200:\n        return None\n    return r.json()\n#Assets\nurl_icon = \"https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/icon.png\"\nresponse = requests.get(url_icon)\nimg = Image.open(BytesIO(response.content))\nurl_AntiRumour = \"https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/machine-learning.jpg\"",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "url_icon",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "url_icon = \"https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/icon.png\"\nresponse = requests.get(url_icon)\nimg = Image.open(BytesIO(response.content))\nurl_AntiRumour = \"https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/machine-learning.jpg\"\nresponse = requests.get(url_AntiRumour)\nAntiRumour = Image.open(BytesIO(response.content))\nlottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')\nlottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')\nlottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "response = requests.get(url_icon)\nimg = Image.open(BytesIO(response.content))\nurl_AntiRumour = \"https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/machine-learning.jpg\"\nresponse = requests.get(url_AntiRumour)\nAntiRumour = Image.open(BytesIO(response.content))\nlottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')\nlottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')\nlottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config\nst.set_page_config(page_title = 'AntiRumour', page_icon=img)",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "img = Image.open(BytesIO(response.content))\nurl_AntiRumour = \"https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/machine-learning.jpg\"\nresponse = requests.get(url_AntiRumour)\nAntiRumour = Image.open(BytesIO(response.content))\nlottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')\nlottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')\nlottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config\nst.set_page_config(page_title = 'AntiRumour', page_icon=img)\n#Header",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "url_AntiRumour",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "url_AntiRumour = \"https://raw.githubusercontent.com/ayman-codes/Deep_Learning/main/Project_final/UI/images/machine-learning.jpg\"\nresponse = requests.get(url_AntiRumour)\nAntiRumour = Image.open(BytesIO(response.content))\nlottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')\nlottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')\nlottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config\nst.set_page_config(page_title = 'AntiRumour', page_icon=img)\n#Header\nst.subheader('AntiRumour')",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "response = requests.get(url_AntiRumour)\nAntiRumour = Image.open(BytesIO(response.content))\nlottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')\nlottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')\nlottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config\nst.set_page_config(page_title = 'AntiRumour', page_icon=img)\n#Header\nst.subheader('AntiRumour')\nst.title('Introduction')",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "AntiRumour",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "AntiRumour = Image.open(BytesIO(response.content))\nlottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')\nlottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')\nlottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config\nst.set_page_config(page_title = 'AntiRumour', page_icon=img)\n#Header\nst.subheader('AntiRumour')\nst.title('Introduction')\n#Body",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "lottie_animation",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "lottie_animation = lottie_url('https://assets4.lottiefiles.com/packages/lf20_l0segmbm.json')\nlottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')\nlottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config\nst.set_page_config(page_title = 'AntiRumour', page_icon=img)\n#Header\nst.subheader('AntiRumour')\nst.title('Introduction')\n#Body\nintro = 'This website is designed for Deep Learning course given by Dr.Mürsel Taşgin\\",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "lottie_Fake",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "lottie_Fake = lottie_url('https://assets1.lottiefiles.com/private_files/lf30_cbizhsdy.json')\nlottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config\nst.set_page_config(page_title = 'AntiRumour', page_icon=img)\n#Header\nst.subheader('AntiRumour')\nst.title('Introduction')\n#Body\nintro = 'This website is designed for Deep Learning course given by Dr.Mürsel Taşgin\\\n    where I aim to showcase all the related projects in the website\\n\\",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "lottie_happy",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "lottie_happy = lottie_url('https://assets8.lottiefiles.com/packages/lf20_ggw4qc1o.json')\n#Config\nst.set_page_config(page_title = 'AntiRumour', page_icon=img)\n#Header\nst.subheader('AntiRumour')\nst.title('Introduction')\n#Body\nintro = 'This website is designed for Deep Learning course given by Dr.Mürsel Taşgin\\\n    where I aim to showcase all the related projects in the website\\n\\\n    _Deep learning_ received a lot of success in many research areas from image processing to\\",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "st.set_page_config(page_title",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "st.set_page_config(page_title = 'AntiRumour', page_icon=img)\n#Header\nst.subheader('AntiRumour')\nst.title('Introduction')\n#Body\nintro = 'This website is designed for Deep Learning course given by Dr.Mürsel Taşgin\\\n    where I aim to showcase all the related projects in the website\\n\\\n    _Deep learning_ received a lot of success in many research areas from image processing to\\\n    voice recognition. Nowadays, the knowledge in deep learning has become the number one skill\\\n    to deal with artificial intelligence related tasks. Our aim with this course is to make our \\n\\",
+        "detail": "UI.app",
+        "documentation": {}
+    },
+    {
+        "label": "intro",
+        "kind": 5,
+        "importPath": "UI.app",
+        "description": "UI.app",
+        "peekOfCode": "intro = 'This website is designed for Deep Learning course given by Dr.Mürsel Taşgin\\\n    where I aim to showcase all the related projects in the website\\n\\\n    _Deep learning_ received a lot of success in many research areas from image processing to\\\n    voice recognition. Nowadays, the knowledge in deep learning has become the number one skill\\\n    to deal with artificial intelligence related tasks. Our aim with this course is to make our \\n\\\n    students earn the ability to deal with modern problems in machine learning.'\nst.image(AntiRumour)\nst.write(intro)\n#Container\nwith st.container():",
+        "detail": "UI.app",
+        "documentation": {}
+    }
+]

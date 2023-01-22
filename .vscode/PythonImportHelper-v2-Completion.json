@@ -1,0 +1,151 @@
+[
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Activation",
+        "importPath": "activations",
+        "description": "activations",
+        "isExtraImport": true,
+        "detail": "activations",
+        "documentation": {}
+    },
+    {
+        "label": "Loss",
+        "importPath": "losses",
+        "description": "losses",
+        "isExtraImport": true,
+        "detail": "losses",
+        "documentation": {}
+    },
+    {
+        "label": "Layer",
+        "importPath": "layers",
+        "description": "layers",
+        "isExtraImport": true,
+        "detail": "layers",
+        "documentation": {}
+    },
+    {
+        "label": "trange",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "Activation",
+        "kind": 6,
+        "importPath": "Week5_HW.activations",
+        "description": "Week5_HW.activations",
+        "peekOfCode": "class Activation:\n    def __call__(self, x: np.ndarray, derivative: bool = False) -> np.ndarray:\n        if not derivative:\n            return self._normal(x)\n        else:\n            return self._derivate(x)\n    @staticmethod\n    def _normal(x: np.ndarray):\n        raise NotImplementedError\n    @staticmethod",
+        "detail": "Week5_HW.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Tanh",
+        "kind": 6,
+        "importPath": "Week5_HW.activations",
+        "description": "Week5_HW.activations",
+        "peekOfCode": "class Tanh(Activation):\n    @staticmethod\n    def _normal(x: np.ndarray):\n        return np.tanh(x)\n    @staticmethod\n    def _derivate(x: np.ndarray):\n        return 1 - np.tanh(x) ** 2\nclass Sigmoid(Activation):\n    @staticmethod\n    def _normal(x: np.ndarray):",
+        "detail": "Week5_HW.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Sigmoid",
+        "kind": 6,
+        "importPath": "Week5_HW.activations",
+        "description": "Week5_HW.activations",
+        "peekOfCode": "class Sigmoid(Activation):\n    @staticmethod\n    def _normal(x: np.ndarray):\n        return 1/(1+np.exp(-x))\n    @staticmethod\n    def _derivate(x: np.ndarray):\n        return Sigmoid._normal(x) * (1 - Sigmoid._normal(x))\nclass Leaky_ReLu(Activation):\n    @staticmethod\n    def _normal(x: np.ndarray):",
+        "detail": "Week5_HW.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Leaky_ReLu",
+        "kind": 6,
+        "importPath": "Week5_HW.activations",
+        "description": "Week5_HW.activations",
+        "peekOfCode": "class Leaky_ReLu(Activation):\n    @staticmethod\n    def _normal(x: np.ndarray):\n        return x*0.01 if x < 0 else x\n    @staticmethod\n    def _derivate(x: np.ndarray):\n        return 0.01 if x < 0 else 1\nclass ReLU(Activation):\n    @staticmethod\n    def _normal(x: np.ndarray):",
+        "detail": "Week5_HW.activations",
+        "documentation": {}
+    },
+    {
+        "label": "ReLU",
+        "kind": 6,
+        "importPath": "Week5_HW.activations",
+        "description": "Week5_HW.activations",
+        "peekOfCode": "class ReLU(Activation):\n    @staticmethod\n    def _normal(x: np.ndarray):\n        if (x > 0).any():\n            return x\n        else:\n            return 0\n    @staticmethod\n    def _derivate(x: np.ndarray):\n        data = [1 if (value>0).any() else 0 for value in x]",
+        "detail": "Week5_HW.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Layer",
+        "kind": 6,
+        "importPath": "Week5_HW.layers",
+        "description": "Week5_HW.layers",
+        "peekOfCode": "class Layer:\n    def __init__(self):\n        self.input = None\n        self.output = None\n    # computes the output Y of a layer for a given input X\n    def forward_propagation(self, input):\n        raise NotImplementedError\n    # computes dE/dX for a given dE/dY (and update parameters if any)\n    def backward_propagation(self, output_error, learning_rate):\n        raise NotImplementedError",
+        "detail": "Week5_HW.layers",
+        "documentation": {}
+    },
+    {
+        "label": "FCLayer",
+        "kind": 6,
+        "importPath": "Week5_HW.layers",
+        "description": "Week5_HW.layers",
+        "peekOfCode": "class FCLayer(Layer):\n    # input_size = number of input neurons\n    # output_size = number of edges that connects to neurons in next layer\n    def __init__(self, input_size, output_size):\n        self.weights = np.random.rand(input_size, output_size) - 0.5\n        self.bias = np.random.rand(1, output_size) - 0.5\n    # returns output for a given input\n    def forward_propagation(self, input_data):\n        self.input = input_data\n        self.output = np.dot(self.input, self.weights) + self.bias",
+        "detail": "Week5_HW.layers",
+        "documentation": {}
+    },
+    {
+        "label": "ActivationLayer",
+        "kind": 6,
+        "importPath": "Week5_HW.layers",
+        "description": "Week5_HW.layers",
+        "peekOfCode": "class ActivationLayer(Layer):\n    def __init__(self, activation: Activation):\n        self.activation = activation\n    # returns the activated input\n    def forward_propagation(self, input_data):\n        self.input = input_data\n        self.output = self.activation(self.input)\n        return self.output\n    # Returns input_error=dE/dX for a given output_error=dE/dY.\n    # learning_rate is not used because there is no \"learnable\" parameters.",
+        "detail": "Week5_HW.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Loss",
+        "kind": 6,
+        "importPath": "Week5_HW.losses",
+        "description": "Week5_HW.losses",
+        "peekOfCode": "class Loss:\n    def __call__(\n        self, y_true: np.ndarray, y_pred: np.ndarray, derivative: bool = False\n    ) -> float:\n        if not derivative:\n            return self._normal(y_true, y_pred)\n        else:\n            return self._derivate(y_true, y_pred)\n    @staticmethod\n    def _normal(y_true: np.ndarray, y_pred: np.ndarray) -> float:",
+        "detail": "Week5_HW.losses",
+        "documentation": {}
+    },
+    {
+        "label": "MSE",
+        "kind": 6,
+        "importPath": "Week5_HW.losses",
+        "description": "Week5_HW.losses",
+        "peekOfCode": "class MSE(Loss):\n    @staticmethod\n    def _normal(y_true: np.ndarray, y_pred: np.ndarray) -> float:\n        return np.mean(np.power(y_true - y_pred, 2))\n    @staticmethod\n    def _derivate(y_true: np.ndarray, y_pred: np.ndarray) -> float:\n        return 2 * (y_pred - y_true) / y_true.size\nclass MAE(Loss):\n    @staticmethod\n    def _normal(y_true: np.ndarray, y_pred: np.ndarray) -> float:",
+        "detail": "Week5_HW.losses",
+        "documentation": {}
+    },
+    {
+        "label": "MAE",
+        "kind": 6,
+        "importPath": "Week5_HW.losses",
+        "description": "Week5_HW.losses",
+        "peekOfCode": "class MAE(Loss):\n    @staticmethod\n    def _normal(y_true: np.ndarray, y_pred: np.ndarray) -> float:\n        return np.mean(np.abs(y_true - y_pred))\n    @staticmethod\n    def _derivate(y_true: np.ndarray, y_pred: np.ndarray) -> float:\n        +1 if (y_pred>y_true) else -1",
+        "detail": "Week5_HW.losses",
+        "documentation": {}
+    },
+    {
+        "label": "Network",
+        "kind": 6,
+        "importPath": "Week5_HW.neural_network",
+        "description": "Week5_HW.neural_network",
+        "peekOfCode": "class Network:\n    def __init__(self):\n        self.layers = []\n        self.loss = None\n        self.loss_prime = None\n        self.err_log = []\n        self.err_log_val = []\n    # add layer to network\n    def add(self, layer: Layer):\n        self.layers.append(layer)",
+        "detail": "Week5_HW.neural_network",
+        "documentation": {}
+    }
+]
